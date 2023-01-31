@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import css from '../Statistics/Statistics.module.css';
-export const Statistics = ({ options, total, positivePercentage }) => {
+const Statistics = ({ options, total, positivePercentage }) => {
   const { good, neutral, bad } = options;
   return (
     <ul className={css.list}>
@@ -12,6 +12,8 @@ export const Statistics = ({ options, total, positivePercentage }) => {
     </ul>
   );
 };
+
+export default Statistics;
 
 Statistics.propTypes = {
   options: PropTypes.objectOf(PropTypes.number).isRequired,

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import css from '../FeedbackOptions/FeedbackOptions.module.css';
-export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   const buttons = Object.keys(options);
   return (
     <div className={css.options}>
@@ -17,6 +17,8 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     </div>
   );
 };
+
+export default FeedbackOptions;
 
 FeedbackOptions.propTypes = {
   options: PropTypes.objectOf(PropTypes.number).isRequired,
